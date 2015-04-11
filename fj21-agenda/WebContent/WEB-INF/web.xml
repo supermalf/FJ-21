@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" id="WebApp_ID" version="2.5">
+  
+  <!--  SERVLETS -->
+  <servlet>
+    <servlet-name>Counter</servlet-name>
+    <servlet-class>br.com.caelum.servlet.Counter</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Counter</servlet-name>
+    <url-pattern>/counter</url-pattern>
+  </servlet-mapping>  
+  
+  <servlet>
+    <servlet-name>HelloWorld</servlet-name>
+    <servlet-class>br.com.caelum.servlet.HelloWorld</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>HelloWorld</servlet-name>
+    <url-pattern>/hello</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>InsertContact</servlet-name>
+    <servlet-class>br.com.caelum.servlet.InsertContactServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>InsertContact</servlet-name>
+    <url-pattern>/insertContact</url-pattern>
+  </servlet-mapping>
+  
+  <!-- ERROR PAGES -->
+  <error-page>
+    <exception-type>java.lang.Exception</exception-type>
+    <location>/error.html</location>
+  </error-page>
+  <error-page>
+    <error-code>404</error-code>
+    <location>/404.html</location>
+  </error-page>
+  
+  
+  <display-name>fj21-agenda</display-name>
+  <welcome-file-list>
+    <welcome-file>welcome.jsp</welcome-file>
+  </welcome-file-list>
+</web-app>
